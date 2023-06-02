@@ -86,7 +86,7 @@ jobs:
           pgfs_ver=$(stoml Cargo.toml package.version)
           pgfs_descr=$(stoml Cargo.toml package.description)
           pgfs_repo=$(stoml Cargo.toml package.repository)
-          trunk publish pgmq --version ${pgfs_ver} \
+          trunk publish pgfs --version ${pgfs_ver} \
             --file .trunk/pgfs-${pgfs_ver}.tar.gz \
             --description ${pgfs_descr} \
             --homepage "https://github.com/CoreDB-io/pgfs" \
