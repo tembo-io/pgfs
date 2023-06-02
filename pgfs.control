@@ -1,0 +1,5 @@
+comment = 'pgfs:  Created by pgrx'
+default_version = '@CARGO_VERSION@'
+module_pathname = '$libdir/pgfs'
+relocatable = false
+superuser = true
