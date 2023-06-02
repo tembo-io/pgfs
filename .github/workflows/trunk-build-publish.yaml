@@ -26,7 +26,7 @@ jobs:
           prefix-key: "pgfs-extension-lint"
           cache-directories: |
             /home/runner/.pgrx
-      - uses: ./.github/actions/pgx-init
+      - uses: ./.github/actions/pgrx-init
       - name: Cargo format
         run: cargo +nightly fmt --all --check
       - name: Clippy
@@ -46,7 +46,7 @@ jobs:
           prefix-key: "pgfs-extension-lint"
           cache-directories: |
             /home/runner/.pgrx
-      - uses: ./.github/actions/pgx-init
+      - uses: ./.github/actions/pgrx-init
       - name: test
         run: |
           rm -rf ./target/pgfs-test-data-* || true
