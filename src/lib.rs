@@ -90,6 +90,10 @@ mod tests {
         };
         assert_eq!(result, Some(true));
 
+        // Assert to check if the src_file exists in the destination directory
+        let dest_file = format!("{}/test_file", dest_dir);
+        assert!(fs::metadata(dest_file).is_ok());
+
         // Clean up the directories
         let _ = fs::remove_dir_all(source_dir);
         let _ = fs::remove_dir_all(dest_dir);

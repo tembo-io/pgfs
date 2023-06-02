@@ -34,9 +34,10 @@ jobs:
 
   test:
     name: Run tests
+    needs: lint
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install Rust stable toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -56,9 +57,10 @@ jobs:
     # only publish off main branch
     if: github.ref == 'refs/heads/main'
     name: trunk publish
+    needs: test
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install Rust stable toolchain
         uses: actions-rs/toolchain@v1
         with:
