@@ -26,7 +26,7 @@ pg_test = []
 pgrx = "~0.9.1"
 
 [dev-dependencies]
-pgrx-tests = "~0.9.1"
+pgrx-tests = "~0.11.3"
 
 [profile.dev]
 panic = "unwind"
